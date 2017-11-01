@@ -50,10 +50,10 @@ public class content_downloader {
     NewsDownloadTask task = new NewsDownloadTask();
 
 
-
+/*
     // try and catch method ↓↓
-        try{
 
+       try{
         //String results = task.execute(url).get();
 
         NewsObject = new JSONObject(results);
@@ -84,6 +84,8 @@ public class content_downloader {
     } catch (JSONException e) {
         e.printStackTrace();
     }
+*/
+
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
