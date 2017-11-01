@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_quick__head_lines"
+    tools:context="com.syedsadath.navigation_drawer.Head_Lines">
+
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:horizontalSpacing="6dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="6dp"
+        android:stretchMode="columnWidth"/>
+
+
+</FrameLayout>
