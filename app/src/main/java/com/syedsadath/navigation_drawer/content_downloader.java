@@ -1,8 +1,10 @@
 package com.syedsadath.navigation_drawer;
 
+
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.GridView;
 
 import org.json.JSONArray;
@@ -17,24 +19,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by syed sadath on 10/31/2017.
- */
-
-public class content_downloader {
+public class content_downloader extends AppCompatActivity {
 
     String url;
 
     public void content_downloader(String url) {
+
         this.url = url;
     }
 
-    GridView gridView ;
-
-    Map<Integer, String> MArticleTitle  =  new HashMap<Integer, String>();
-    Map<Integer, String> MArticleImgUrl =  new HashMap<Integer, String>();
-
-    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     JSONObject NewsObject;
     String articles;
@@ -42,25 +35,31 @@ public class content_downloader {
     JSONObject SingleArticleObject;
     String SingleArticle;
 
-    int i;
-
-    ArrayList<String> AArticleUrls = new ArrayList<>();
-
-
-    NewsDownloadTask task = new NewsDownloadTask();
+    static int noOfArticles;
+    static int i;
 
 
-/*
+   static Map<Integer, String> MArticleTitle = new HashMap<Integer, String>();
+   static Map<Integer, String> MArticleImgUrl = new HashMap<Integer, String>();
+   static ArrayList<String> AArticleUrls = new ArrayList<>();
+
+        NewsDownloadTask task = new NewsDownloadTask();
+
     // try and catch method ↓↓
 
-       try{
-        //String results = task.execute(url).get();
+    public void json_parsin() {
+
+        try{
+
+        String results = task.execute(url).get();
 
         NewsObject = new JSONObject(results);
 
         articles = NewsObject.getString("articles");
 
         ArticlesArray = new JSONArray(articles);
+
+        noOfArticles = ArticlesArray.length();
 
         for (i = 0; i < ArticlesArray.length(); i++) {
 
@@ -78,69 +77,13 @@ public class content_downloader {
             MArticleImgUrl.put(i, Article_img_url);
             AArticleUrls.add(Article_url);
 
-            Log.i("Articles_Working_fine", AArticleUrls.get(i));
-
+            Log.i("articles " , AArticleUrls.get(i));
+         }
+        }catch (Exception e){
+            e.printStackTrace();
         }
-    } catch (JSONException e) {
-        e.printStackTrace();
-    }
-*/
-
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-    public  class NewsDownloadTask extends AsyncTask<String, Void, String> {
-
-
-        @Override
-        protected String doInBackground(String... urls) {
-
-
-
-
-            String result = "";
-            URL url;
-            HttpURLConnection urlConnection = null;
-
-            try {
-
-                url = new URL(urls[0]);
-
-                urlConnection = (HttpURLConnection) url.openConnection();
-
-                InputStream in = urlConnection.getInputStream();
-
-                InputStreamReader inputStreamReaderreader = new InputStreamReader(in);
-
-                int data = inputStreamReaderreader.read();
-
-                while (data != -1) {
-
-                    char current = (char) data;
-                    result += current;
-
-                    data = inputStreamReaderreader.read();
-                }
-
-
-            } catch (Exception e) {
-
-                e.printStackTrace();
-            }
-
-
-            return result;
-        }
-
     }
 
 }
-
-
-
-
-
-
 
 

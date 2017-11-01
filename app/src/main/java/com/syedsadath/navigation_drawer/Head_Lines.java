@@ -23,6 +23,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.syedsadath.navigation_drawer.content_downloader.AArticleUrls;
+import static com.syedsadath.navigation_drawer.content_downloader.MArticleImgUrl;
+import static com.syedsadath.navigation_drawer.content_downloader.MArticleTitle;
+import static com.syedsadath.navigation_drawer.content_downloader.i;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,8 +40,6 @@ public class Head_Lines extends Fragment {
     GridView gridView ;
 
 
-    Map<Integer, String> MArticleTitle  =  new HashMap<Integer, String>();
-    Map<Integer, String> MArticleImgUrl =  new HashMap<Integer, String>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,9 @@ public class Head_Lines extends Fragment {
         content_downloader contentDownloader = new content_downloader();
 
         contentDownloader.content_downloader(url);
+         contentDownloader.json_parsin();
+
+
     }
 
     @Override
