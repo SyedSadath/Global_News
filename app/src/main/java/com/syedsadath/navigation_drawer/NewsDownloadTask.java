@@ -1,6 +1,5 @@
 package com.syedsadath.navigation_drawer;
 
-
 import android.os.AsyncTask;
 
 import java.io.InputStream;
@@ -37,16 +36,10 @@ public class NewsDownloadTask extends AsyncTask<String, Void, String> {
                 data = inputStreamReaderreader.read();
             }
 
-
-
         } catch ( Exception e) {
 
             e.printStackTrace();
         }
-
-
         return result;
     }
-
-
 }

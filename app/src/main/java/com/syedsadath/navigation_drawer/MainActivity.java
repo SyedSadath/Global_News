@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
+import android.text.GetChars;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,12 +15,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import static java.lang.System.exit;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -45,7 +52,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout  drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -83,14 +90,16 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.Headlines) {
 
+            String url2 ="https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=cb439410afcb4ef69b20154803ae69ba";
             Head_Lines headLines = new Head_Lines();
-
+            headLines.reciveUrl(url2);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_main_Relative_layout,headLines,headLines.getTag()).commit();
 
         } else if (id == R.id.science) {
 
-
+            String url = "https://newsapi.org/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=cb439410afcb4ef69b20154803ae69ba";
+                        
 
         } else if (id == R.id.nav_slideshow) {
 
