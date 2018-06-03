@@ -1,35 +1,614 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cycle="http://schemas.android.com/tools">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/Headlines"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="quick_Headlines" />
-        <item
-            android:id="@+id/science"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="science" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="siddiq" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="shabana" />
-    </group>
+    <item android:title="General">
+        <menu>
 
-    <item android:title="Communicate">
+            <item
+                android:id="@+id/ABC_News"
+                android:title="     ABC News"/>
+
+            <item
+                android:id="@+id/ABC_News_AU"
+                android:title="     ABC News (AU)"/>
+
+            <item
+                android:id="@+id/Aftenposten"
+                android:title="     Aftenposten"/>
+
+            <item
+                android:id="@+id/Al_Jazeera_English"
+                android:title="     Al Jazeera English"/>
+
+            <item
+                android:id="@+id/ANSA_it"
+                android:title="     ANSA.it"/>
+
+            <item
+                android:id="@+id/Ary_News"
+                android:title="     Ary News"/>
+
+            <item
+                android:id="@+id/Associated_Press"
+                android:title="     Associated Press"/>
+
+            <item
+                android:id="@+id/Axios"
+                android:title="     Axios"/>
+
+            <item
+                android:id="@+id/BBC_News"
+                android:title="     BBC News"/>
+
+            <item
+                android:id="@+id/Bild"
+                android:title="     Bild"/>
+
+            <item
+                android:id="@+id/Blasting_News"
+                android:title="     Blasting News"/>
+
+            <item
+                android:id="@+id/CBC_News"
+                android:title="     CBC News"/>
+
+            <item
+                android:id="@+id/CNN"
+                android:title="     CNN"/>
+
+            <item
+                android:id="@+id/CNN_Spanish"
+                android:title="     CNN Spanish"/>
+
+            <item
+                android:id="@+id/Der_Tagesspiegel"
+                android:title="     Der Tagesspiegel"/>
+
+            <item
+                android:id="@+id/El_Mundo"
+                android:title="     El Mundo"/>
+
+            <item
+                android:id="@+id/Focus"
+                android:title="     Focus"/>
+
+            <item
+                android:id="@+id/Fox_News"
+                android:title="     Fox News"/>
+
+            <item
+                android:id="@+id/Globo"
+                android:title="     Globo"/>
+
+            <item
+                android:id="@+id/Göteborgs_Posten"
+                android:title="     Göteborgs-Posten"/>
+
+            <item
+                android:id="@+id/Independent"
+                android:title="     Independent"/>
+
+            <item
+                android:id="@+id/Infobae"
+                android:title="     Infobae"/>
+
+            <item
+                android:id="@+id/La_Gaceta"
+                android:title="     La Gaceta"/>
+
+            <item
+                android:id="@+id/La_Repubblica"
+                android:title="     La Repubblica"/>
+
+            <item
+                android:id="@+id/Le_Monde"
+                android:title="     Le Monde"/>
+
+            <item
+                android:id="@+id/Lenta"
+                android:title="     Lenta"/>
+
+            <item
+                android:id="@+id/Libération"
+                android:title="     Libération"/>
+
+            <item
+                android:id="@+id/Metro"
+                android:title="     Metro"/>
+
+            <item
+                android:id="@+id/Mirror"
+                android:title="     Mirror"/>
+
+            <item
+                android:id="@+id/MSNBC"
+                android:title="     MSNBC"/>
+
+            <item
+                android:id="@+id/NBC_News"
+                android:title="     NBC News"/>
+
+            <item
+                android:id="@+id/News24"
+                android:title="     News24"/>
+
+            <item
+                android:id="@+id/News_com_au"
+                android:title="     News.com.au"/>
+
+            <item
+                android:id="@+id/Newsweek"
+                android:title="     Newsweek"/>
+
+            <item
+                android:id="@+id/New_York_Magazine"
+                android:title="     New York Magazine"/>
+
+            <item
+                android:id="@+id/NRK"
+                android:title="     NRK"/>
+
+            <item
+                android:id="@+id/RBC"
+                android:title="     RBC"/>
+
+            <item
+                android:id="@+id/Reuters"
+                android:title="     Reuters"/>
+
+            <item
+                android:id="@+id/RT"
+                android:title="     RT"/>
+
+            <item
+                android:id="@+id/RTE"
+                android:title="     RTE"/>
+
+            <item
+                android:id="@+id/RTL"
+                android:title="     RTL"/>
+
+            <item
+                android:id="@+id/SABQ"
+                android:title="     SABQ"/>
+
+            <item
+                android:id="@+id/Spiegel"
+                android:title="     Spiegel"/>
+
+            <item
+                android:id="@+id/Svenska_Dagbladet"
+                android:title="     Svenska Dagbladet"/>
+
+            <item
+                android:id="@+id/Reddit"
+                android:title="     Reddit"/>
+
+            <item
+                android:id="@+id/The_Globe_And_Mail"
+                android:title="     The Globe And Mail"/>
+
+            <item
+                android:id="@+id/The_Guardian_AU"
+                android:title="     The Guardian (AU)"/>
+
+            <item
+                android:id="@+id/The_Guardian_UK"
+                android:title="     The Guardian (UK)"/>
+
+            <item
+                android:id="@+id/The_Hindu"
+                android:title="     The Hindu"/>
+
+            <item
+                android:id="@+id/The_Huffington_Post"
+                android:title="     The Huffington Post"/>
+
+            <item
+                android:id="@+id/The_Irish_Times"
+                android:title="     The Irish Times"/>
+
+            <item
+                android:id="@+id/The_New_York_Times"
+                android:title="     The New York Times"/>
+
+            <item
+                android:id="@+id/The_Times_of_India"
+                android:title="     The Times of India"/>
+
+            <item
+                android:id="@+id/The_Telegraph"
+                android:title="     The Telegraph"/>
+
+            <item
+                android:id="@+id/The_Washington"
+                android:title="     The Washington"/>
+
+            <item
+                android:id="@+id/Time"
+                android:title="     Time"/>
+
+            <item
+                android:id="@+id/USA_Today"
+                android:title="     USA Today"/>
+
+            <item
+                android:id="@+id/Vice_News"
+                android:title="     Vice News"/>
+
+            <item
+                android:id="@+id/Xinhua_Net"
+                android:title="     Xinhua Net"/>
+
+            <item
+                android:id="@+id/Ynet"
+                android:title="     Ynet"/>
+        </menu>
+    </item>
+
+
+    <item android:title="Bussiness">
+        <menu>
+
+            <item
+                android:id="@+id/Argaam"
+                android:title="     Argaam"/>
+
+            <item
+                android:id="@+id/Australian_Financial_Review"
+                android:title="     Australian Financial Review"/>
+
+            <item
+                android:id="@+id/Bloomberg"
+                android:title="     Bloomberg"/>
+
+            <item
+                android:id="@+id/Business_Insider"
+                android:title="     Business Insider"/>
+
+            <item
+                android:id="@+id/Business_Insider_UK"
+                android:title="     Business Insider (UK)"/>
+
+            <item
+                android:id="@+id/CNBC"
+                android:title="     CNBC"/>
+
+            <item
+                android:id="@+id/Die_Zeit"
+                android:title="     Die Zeit"/>
+
+            <item
+                android:id="@+id/Financial_Post"
+                android:title="     Financial Post"/>
+
+            <item
+                android:id="@+id/Financial_Times"
+                android:title="     Financial Times"/>
+
+            <item
+                android:id="@+id/Fortune"
+                android:title="     Fortune"/>
+
+            <item
+                android:id="@+id/Handelsblatt"
+                android:title="     Handelsblatt"/>
+
+            <item
+                android:id="@+id/Il_Sole_24_Ore"
+                android:title="     Il Sole 24 Ore"/>
+
+            <item
+                android:id="@+id/InfoMoney"
+                android:title="     InfoMoney"/>
+
+            <item
+                android:id="@+id/Les_Echos"
+                android:title="     Les Echos"/>
+
+            <item
+                android:id="@+id/The_Economist"
+                android:title="     The Economist"/>
+
+            <item
+                android:id="@+id/The_Wall_Street_Journal"
+                android:title="     The Wall Street Journal"/>
+
+            <item
+                android:id="@+id/Wirtschafts_Woche"
+                android:title="     Wirtschafts Woche"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Technology">
+        <menu>
+
+            <item
+                android:id="@+id/Ars_Technica"
+                android:title="     Ars Technica"/>
+
+            <item
+                android:id="@+id/Crypto_Coins_News"
+                android:title="     Crypto Coins News"/>
+
+            <item
+                android:id="@+id/Engadget"
+                android:title="     Engadget"/>
+
+            <item
+                android:id="@+id/Gruenderszene"
+                android:title="     Gruenderszene"/>
+
+            <item
+                android:id="@+id/Hacker_News"
+                android:title="     Hacker News"/>
+
+            <item
+                android:id="@+id/Recode"
+                android:title="     Recode"/>
+
+            <item
+                android:id="@+id/T3n"
+                android:title="     T3n"/>
+
+            <item
+                android:id="@+id/TechCrunch"
+                android:title="     TechCrunch"/>
+
+            <item
+                android:id="@+id/TechCrunch_CN"
+                android:title="     TechCrunch (CN)"/>
+
+            <item
+                android:id="@+id/TechRadar"
+                android:title="     TechRadar"/>
+
+            <item
+                android:id="@+id/The_Next_Web"
+                android:title="     The Next Web"/>
+
+            <item
+                android:id="@+id/The_Verge"
+                android:title="     The Verge"/>
+
+            <item
+                android:id="@+id/Wired_technology"
+                android:title="     Wired technology"/>
+
+            <item
+                android:id="@+id/Wired_de"
+                android:title="     Wired.de"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Sports">
+
+        <menu>
+
+            <item
+                android:id="@+id/BBC_Sport"
+                android:title="     BBC Sport"/>
+
+            <item
+                android:id="@+id/Bleacher_Report"
+                android:title="     Bleacher Report"/>
+
+            <item
+                android:id="@+id/ESPN"
+                android:title="     ESPN"/>
+
+            <item
+                android:id="@+id/ESPN_Cric_Info"
+                android:title="     ESPN Cric Info"/>
+
+            <item
+                android:id="@+id/Football_Italia"
+                android:title="     Football Italia"/>
+
+            <item
+                android:id="@+id/FourFourTwo"
+                android:title="     FourFourTwo"/>
+
+            <item
+                android:id="@+id/Fox_Sports"
+                android:title="     Fox Sports"/>
+
+            <item
+                android:id="@+id/L_equipe"
+                android:title="     L'equipe"/>
+
+            <item
+                android:id="@+id/Marca"
+                android:title="     Marca"/>
+
+            <item
+                android:id="@+id/NFL_News"
+                android:title="     NFL News"/>
+
+            <item
+                android:id="@+id/NHL_News"
+                android:title="     NHL News"/>
+
+            <item
+                android:id="@+id/TalkSport"
+                android:title="     TalkSport"/>
+
+            <item
+                android:id="@+id/The_Sport_Bible"
+                android:title="     The Sport Bible"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Google">
+        <menu>
+
+            <item
+                android:id="@+id/Google_News_general"
+                android:title="     Google News general"/>
+
+            <item
+                android:id="@+id/Argentina"
+                android:title="     Google News (Argentina)"/>
+
+            <item
+                android:id="@+id/Australia"
+                android:title="     Google News (Australia)"/>
+
+            <item
+                android:id="@+id/Brasil"
+                android:title="     Google News (Brasil)"/>
+
+            <item
+                android:id="@+id/Canada"
+                android:title="     Google News (Canada)"/>
+
+            <item
+                android:id="@+id/France"
+                android:title="     Google News (France)"/>
+
+            <item
+                android:id="@+id/India"
+                android:title="     Google News (India)"/>
+
+            <item
+                android:id="@+id/Israel"
+                android:title="     Google News (Israel)"/>
+
+            <item
+                android:id="@+id/Italy"
+                android:title="     Google News (Italy)"/>
+
+            <item
+                android:id="@+id/Russia"
+                android:title="     Google News (Russia)"/>
+
+            <item
+                android:id="@+id/Saudi_Arabia"
+                android:title="     Google News (Saudi Arabia)"/>
+
+            <item
+                android:id="@+id/UK"
+                android:title="     Google News (UK)"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Entertainment">
+        <menu>
+
+
+            <item
+                android:id="@+id/Buzzfeed"
+                android:title="     Buzzfeed"/>
+
+            <item
+                android:id="@+id/Daily_Mail"
+                android:title="     Daily Mail"/>
+
+            <item
+                android:id="@+id/Entertainment_Weekly"
+                android:title="     Entertainment Weekly"/>
+
+            <item
+                android:id="@+id/Mashable"
+                android:title="     Mashable"/>
+
+            <item
+                android:id="@+id/The_Lad_Bible"
+                android:title="     The Lad Bible"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Politics">
+        <menu>
+
+            <item
+                android:id="@+id/Breitbart_News"
+                android:title="     Breitbart News"/>
+
+            <item
+                android:id="@+id/La_Nacion"
+                android:title="     La Nacion"/>
+
+            <item
+                android:id="@+id/Politico"
+                android:title="     Politico"/>
+
+            <item
+                android:id="@+id/The_Hill"
+                android:title="     The Hill"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Science and Nature">
+        <menu>
+
+            <item
+                android:id="@+id/National_Geographic"
+                android:title="     National Geographic"/>
+
+            <item
+                android:id="@+id/New_Scientist"
+                android:title="     New Scientist"/>
+
+            <item
+                android:id="@+id/Next_Big_Future"
+                android:title="     Next Big Future"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Gaming">
+        <menu>
+
+            <item
+                android:id="@+id/IGN"
+                android:title="     IGN"/>
+
+            <item
+                android:id="@+id/Polygon"
+                android:title="     Polygon"/>
+
+        </menu>
+    </item>
+
+
+
+    <item android:title="Music">
+        <menu>
+
+            <item
+                android:id="@+id/MTV_News"
+                android:title="     MTV News"/>
+
+            <item
+                android:id="@+id/MTV_News_UK"
+                android:title="     MTV News (UK)"/>
+
+        </menu>
+    </item>
+
+
+
+    <item android:title="Health and Medical">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/Medical_News_Today"
+                android:title="     Medical News Today"/>
         </menu>
     </item>
 

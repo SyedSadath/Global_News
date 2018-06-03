@@ -22,8 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="#66222929"
+        android:background="#353535"
         android:text="Headlines of the current topic"
-        android:textColorLink="@android:color/background_dark" />
+        android:textColor="@android:color/background_light" />
 
 </RelativeLayout>

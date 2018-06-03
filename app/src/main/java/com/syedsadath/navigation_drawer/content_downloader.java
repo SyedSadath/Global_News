@@ -24,7 +24,7 @@ public class content_downloader extends AppCompatActivity {
 
     static Map<Integer, String> MArticleTitle = new HashMap<Integer, String>();
     static Map<Integer, String> MArticleImgUrl = new HashMap<Integer, String>();
-    static ArrayList<String> AArticleUrls = new ArrayList<>();
+    static Map<Integer, String> MArticleUrls = new HashMap<Integer, String>();
 
     NewsDownloadTask task = new NewsDownloadTask();
 
@@ -60,9 +60,10 @@ public class content_downloader extends AppCompatActivity {
 
                 MArticleTitle.put(i, Article_titles);
                 MArticleImgUrl.put(i, Article_img_url);
-                AArticleUrls.add(Article_url);
+                MArticleUrls.put(i, Article_url);
 
-                Log.i("articles " , AArticleUrls.get(i));
+                Log.i("Clicked_subURLs", String.valueOf(MArticleTitle.get(i)));
+
             }
            }     catch (Exception e){
                e.printStackTrace();
